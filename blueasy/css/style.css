@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "NotoBold";
+  src: url("../fonts/notosans-bold-webfont.eot");
+  src: url("../fonts/notosans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/notosans-bold-webfont.woff2") format("woff2"), url("../fonts/notosans-bold-webfont.woff") format("woff"), url("../fonts/notosans-bold-webfont.ttf") format("truetype"), url("../fonts/notosans-bold-webfont.svg#noto_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoItalic";
+  src: url("../fonts/notosans-italic-webfont.eot");
+  src: url("../fonts/notosans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/notosans-italic-webfont.woff2") format("woff2"), url("../fonts/notosans-italic-webfont.woff") format("woff"), url("../fonts/notosans-italic-webfont.ttf") format("truetype"), url("../fonts/notosans-italic-webfont.svg#noto_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoRegular";
+  src: url("../fonts/notosans-regular-webfont.eot");
+  src: url("../fonts/notosans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/notosans-regular-webfont.woff2") format("woff2"), url("../fonts/notosans-regular-webfont.woff") format("woff"), url("../fonts/notosans-regular-webfont.ttf") format("truetype"), url("../fonts/notosans-regular-webfont.svg#noto_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoLight";
+  src: url("../fonts/notosans-light-webfont.woff2") format("woff2"), url("../fonts/notosans-light-webfont.woff") format("woff"), url("../fonts/notosans-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.background {
+  background: url(../imgs/header.jpg);
+  background-size: cover;
+}
+
+.top-bar {
+  width: 100%;
+  padding: 2em 0;
+  margin: 0;
+  background: #353f46;
+  opacity: 0.8;
+}
+
+.logo {
+  padding: 0;
+  margin: 0 0 0 10em;
+  color: #fff;
+  font-size: 30px;
+  font-family: "NotoBold";
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #4bcaff;
+}
+
+.e-color {
+  color: #4bcaff;
+}
+
+.e-color:hover {
+  color: #fff;
+}
+
+.top-nav {
+  padding: 0.5em 0 0 0;
+  margin: 0 10em 0 0;
+  float: right;
+}
+
+.top-nav-item {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: "NotoBold";
+}
+
+.top-nav-link {
+  padding: 0.3em 1em;
+  margin: 0;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-nav-link:hover {
+  color: #4bcaff;
+  border: 0.3em solid #4bcaff;
+}
+
+.intro-section {
+  padding: 17em 20em;
+  margin: 0;
+  text-align: center;
+}
+
+.tittle {
+  padding: 0.1em 0.5em;
+  margin: 0.2em 0;
+  font-size: 42px;
+  color: #fff;
+  background: #353f46;
+  font-family: "NotoLight";
+  text-transform: uppercase;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.tittle-sections {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-family: "NotoLight";
+  text-transform: uppercase;
+}
+
+.tittle-decoration {
+  text-decoration: underline;
+}
+
+.service-section {
+  padding: 5em 20em;
+  margin: 0;
+  color: #fff;
+  background: #4bcaff;
+}
+
+.img-services {
+  padding: 1.5em 0;
+  margin: 0;
+}
+
+.tittle-services {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-family: "NotoRegular";
+}
+
+.text-services {
+  padding: 0;
+  margin: 1em 0;
+  font-size: 12px;
+}
+
+.portfolio-section {
+  padding: 5em 20em;
+  margin: 0;
+  color: #404a52;
+  background: #fff;
+}
+
+.portfolio-bar {
+  padding: 0;
+  margin: 0 0 6em;
+}
+
+.portfolio-nav {
+  padding: 0.4em 0 0 0;
+  margin: 0;
+  float: right;
+}
+
+.portfolio-nav-item {
+  display: inline-block;
+  padding: 0;
+  margin: 0 1.5em;
+  font-size: 14px;
+  font-family: "NotoBold";
+}
+
+.portfolio-nav-link {
+  display: block;
+  color: #404a52;
+  text-decoration: none;
+}
+
+.portfolio-nav-link:hover {
+  padding: 0.3em 1em;
+  margin: 0;
+  color: #4bcaff;
+  border: 0.3em solid #4bcaff;
+}
+
+.portfolio-img {
+  padding: 0;
+  margin: 0 0 2em 0;
+}
+
+.portfolio-img:hover {
+  filter: blur(5px);
+}
+
+.just-section {
+  padding: 5em 20em;
+  margin: 0;
+  color: #fff;
+  background: #515f67;
+}
+
+.just-text {
+  padding: 0;
+  margin: 2em 10em 3em 0;
+  font-size: 14px;
+  font-family: "NotoRegular";
+}
+
+.just-button {
+  padding: 1em 3em;
+  border: 0.2em solid #353f46;
+  font-size: 14px;
+  font-family: "NotoBold";
+  color: #353f46;
+  text-decoration: none;
+}
+
+.twitter-section {
+  padding: 5em 20em;
+  margin: 0;
+  color: #fff;
+  background: #4bcaff;
+}
+
+.logo-twitter {
+  float: right;
+}
+
+.twitter-text {
+  padding: 0;
+  margin: 2em 0;
+  font-size: 28px;
+  font-family: "NotoLight";
+}
+
+.bold-text {
+  font-family: "NotoBold";
+}
+
+.about-section {
+  padding: 5em 20em;
+  margin: 0;
+  color: #fff;
+  background: url(../imgs/camera.jpg);
+}
+
+.about-text {
+  padding: 0;
+  margin: 2em 0;
+  font-size: 14px;
+  font-family: "NotoRegular";
+}
+
+.about-imgs {
+  padding: 0;
+  margin: 1.5em 0;
+}
+
+.about-icons {
+  padding: 1em;
+  border: 0.1em solid #fff;
+  margin: 0 1em;
+}
