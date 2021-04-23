@@ -10,6 +10,7 @@
     background: url(../imgs/header.jpg);
     background-size: cover;
 }
+//header
 .top-bar{
     width: 100%;
     padding: 2em 0;
@@ -57,6 +58,9 @@
     color: #4bcaff;
     border: .3em solid #4bcaff;
 }
+//header
+
+//intro-section
 .intro-section{
     padding: 17em 20em;
     margin: 0;
@@ -83,6 +87,9 @@
 .tittle-decoration{
     text-decoration: underline;
 }
+//intro-section
+
+//service-section
 .service-section{
     padding: 5em 20em;
     margin: 0;
@@ -104,7 +111,9 @@
     margin: 1em 0;
     font-size: 12px;
 }
+//service-section
 
+//portfolio-section
 .portfolio-section{
     padding: 5em 20em;
     margin: 0;
@@ -145,6 +154,9 @@
 .portfolio-img:hover{
     filter: blur(5px);
 }
+//portfolio-section
+
+//just-section
 .just-section{
     padding: 5em 20em;
     margin: 0;
@@ -165,6 +177,9 @@
     color: #353f46;
     text-decoration: none;
 }
+//just-section
+
+//twitter-section
 .twitter-section{
     padding: 5em 20em;
     margin: 0;
@@ -183,6 +198,9 @@
 .bold-text{
     font-family: 'NotoBold';
 }
+//twitter-section
+
+//about-section
 .about-section{
     padding: 5em 20em;
     margin: 0;
@@ -204,3 +222,59 @@
     border: 0.1em solid #fff;
     margin: 0 1em;
 }
+//about-section
+
+//testimonial-section
+.testimonial-section{
+    padding: 5em 20em;
+    margin: 0;
+    color: #404a52;
+    background: #fff;
+}
+.testimonial-quote{
+    height: 2em;
+    width: 2em;
+    float: right;
+}
+.testimonials-text{
+    padding: 0;
+    margin: 1em 0;
+    font-size: 28px;
+    font-family: 'NotoLight';
+}
+.testimonial-firm{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'NotoBold';
+    color: #4bcaff;
+    text-transform: capitalize;
+}
+//testimonial-section
+
+//contact-section
+.contact-section{
+    padding: 5em 20em;
+    margin: 0;
+    color: #fff;
+    background: url(../imgs/contact.jpg);
+}
+.tittle-form{
+    padding: 0;
+    margin: 2em 0 0 0;
+    font-size: 14px;
+    font-family: 'NotoBold';
+    text-transform: uppercase;
+}
+.input-text{
+    padding: 0;
+    margin: 0;
+    width: 90%;
+}
+.contact-text{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'NotoRegular';
+}
+//contact-section
