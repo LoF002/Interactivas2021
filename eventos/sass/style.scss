@@ -8,6 +8,9 @@ $bold: 700;
 /* Extra small devices (portrait phones, less than 820px) */
 //@media (max-width: 820px)
 @media screen and (max-width: 820px){
+    html{
+        scroll-behavior: smooth;
+    }
     body{
         margin: 0;
         padding: 0;
@@ -18,6 +21,11 @@ $bold: 700;
         padding: 0 1.25em;
         padding-top: 2.5em;
         padding-bottom: 3.75em;
+    }
+    footer{
+        padding: 1.3125em 1.25em 1.5625em;
+        background: linear-gradient($ligth-purple,$purple);
+        color: $gray;
     }
     .container-fluid{
         padding: 0;
@@ -35,6 +43,15 @@ $bold: 700;
         width: 100%;
         text-align: center;
     }
+    .modal{
+        display: none;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.65);
+    }
     .top-nav{
         padding: 1.25em 1.25em 0;
         padding-bottom: 3.625em;
@@ -47,8 +64,8 @@ $bold: 700;
         background: $gray;
         transition: .5s;
         text-align: left;
-        z-index: 2;
         overflow-y: auto;
+        z-index: 3;
     }
     .top-nav-item{
         display: block;
@@ -121,6 +138,7 @@ $bold: 700;
         padding: 0 1.25em;
         text-align: center;
         color: $gray;
+        z-index: 1;
     }
     .tittle-intro{
         margin-bottom: 1.25em;
@@ -166,13 +184,63 @@ $bold: 700;
         background-color: $purple;
         color: $gray;
     }
+    .submit-btn:hover{
+        background-color: $ligth-purple;
+    }
     //intro-section
 
     //events-section
     .events-section{
         margin: 0;
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
         padding: 0 1.25em;
         background: white;
     }
+    .container-event{
+        margin-bottom: 1.25em;
+    }
+    .img-event{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 222px;
+        background: $gray;
+    }
+    .tittle-event{
+        margin: 0.3125em 0.9375em;
+        padding: 0;
+        font-size: 24px;
+        font-weight: $bold;
+        color: $purple;
+    }
+    .icon-info{
+        margin-right: 0.3125em;
+        margin-left: 0.5em;
+    }
+    .info-event{
+        margin: 0.3125em 0.9375em;
+        padding: 0;
+        font-size: 18px;
+        font-weight: $regular;
+        color: $ligth-purple;
+    }
     //events-section
+    .bottom-bar{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .bottom-nav{
+        margin: 0;
+        padding: 0;
+    }
+    .bottom-nav-iteam{
+        display: inline-block;
+        padding: 0 .8em;
+    }
+    .bottom-nav-link{
+        color: $gray;
+        text-decoration: none;
+    }
 }
