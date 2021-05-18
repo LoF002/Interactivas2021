@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro VueJS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <img v-bind:src="image" alt="Event">
+        <h2>{{ tittle }}</h2>
+        <p>{{ description }}</p>
+
+        <p v-if="inventory > 20">Available</p>
+        <p v-else-if="inventory <= 20 && inventory > 0">Almost sold out</p>
+        <p v-else>Sold out</p>
+
+        <p>Cart: {{ cart }}</p>
+
+        <button class="btn btn-primary" v-on:click="addToCart">Add</button>
+        <button class="btn btn-primary" v-on:click="removeFromCart">Remove</button>
+    </div>
+
+</body>
+<script src="./js/main.js"></script>
+<script>
+    const mountedApp = app.mount("#app");
+</script>
+</html>
