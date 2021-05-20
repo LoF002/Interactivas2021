@@ -52,6 +52,7 @@
   }
 
   .top-nav {
+    display: block;
     padding: 1.25em 1.25em 0;
     padding-bottom: 3.625em;
     margin: 0;

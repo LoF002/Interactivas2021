@@ -1,4 +1,5 @@
 let nav = document.body.getElementsByClassName('top-nav')[0];
+
 let modal = document.body.getElementsByClassName('modal')[0];
 
 function openMobileMenu(){

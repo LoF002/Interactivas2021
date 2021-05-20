@@ -7,43 +7,51 @@ $bold: 700;
 
 /* Extra small devices (portrait phones, less than 820px) */
 //@media (max-width: 820px)
-@media screen and (max-width: 820px){
-    html{
+@media screen and (max-width: 820px) {
+    html {
         scroll-behavior: smooth;
     }
-    body{
+
+    body {
         margin: 0;
         padding: 0;
-        font-family: 'Montserrat', sans-serif;;
+        font-family: 'Montserrat', sans-serif;
+        ;
     }
-    header{
+
+    header {
         margin: 0;
         padding: 0 1.25em;
         padding-top: 2.5em;
         padding-bottom: 3.75em;
     }
-    footer{
+
+    footer {
         padding: 1.3125em 1.25em 1.5625em;
-        background: linear-gradient($ligth-purple,$purple);
+        background: linear-gradient($ligth-purple, $purple);
         color: $gray;
     }
-    .container-fluid{
+
+    .container-fluid {
         padding: 0;
         margin: 0;
     }
+
     //background-top
-    .background-top{
+    .background-top {
         background: linear-gradient($purple, $ligth-purple);
     }
+
     //background-top
     //header
-    .top-bar{
+    .top-bar {
         margin: 0;
         padding: 0;
         width: 100%;
         text-align: center;
     }
-    .background-dark{
+
+    .background-dark {
         display: none;
         position: fixed;
         z-index: 2;
@@ -52,7 +60,9 @@ $bold: 700;
         overflow: auto;
         background-color: rgba(0, 0, 0, 0.65);
     }
-    .top-nav{
+
+    .top-nav {
+        display: block;
         padding: 1.25em 1.25em 0;
         padding-bottom: 3.625em;
         margin: 0;
@@ -67,103 +77,119 @@ $bold: 700;
         overflow-y: auto;
         z-index: 3;
     }
-    .top-nav-item{
+
+    .top-nav-item {
         display: block;
         padding: 0;
         margin: 0;
         font-weight: $bold;
         font-size: 20px;
     }
-    .top-nav-link{
+
+    .top-nav-link {
         padding: 0;
         margin: 0;
         display: block;
         color: $purple;
         text-decoration: none;
     }
-    .tittle-categorias{
+
+    .tittle-categorias {
         margin-bottom: 0.5em;
     }
-    .categorias{
+
+    .categorias {
         display: block;
         margin-bottom: 0.3125em;
         padding-left: 0.375em;
         font-size: 16px;
         font-weight: $regular;
     }
-    .mob-menu{
+
+    .mob-menu {
         display: block;
         color: $gray;
         font-size: 2.5em;
         position: absolute;
     }
-    .background-search{
+
+    .background-search {
         padding: 0;
         margin: 0;
         margin-bottom: 1.4375em;
         width: 8.1em;
-        background: linear-gradient(to right, $ligth-purple,$purple);
+        background: linear-gradient(to right, $ligth-purple, $purple);
         border-radius: 3px;
     }
-    .input-search{
+
+    .input-search {
         padding: 0;
         margin: 0.375em;
         width: 7.2271875em;
         border-radius: 3px;
         font-size: 16px;
     }
-    .icon-search{
+
+    .icon-search {
         padding: 0;
         margin-right: 0.375em;
         color: $gray;
     }
-    .mob-close{
+
+    .mob-close {
         display: block;
         color: $ligth-purple;
         font-size: 2.5em;
         position: absolute;
         right: .5em;
     }
-    .logo-header{
+
+    .logo-header {
         padding: 0;
         margin: 0;
         height: 33.25px;
         width: 139.174px;
     }
+
     //header
 
     //intro-section
-    .intro-section{
+    .intro-section {
         margin: 0;
         padding: 0 1.25em;
         text-align: center;
         color: $gray;
         z-index: 1;
     }
-    .tittle-intro{
+
+    .tittle-intro {
         margin-bottom: 1.25em;
         padding: 0;
         font-size: 25px;
         font-weight: $bold;
         line-height: 1.5em;
     }
-    .subtittle-intro{
+
+    .subtittle-intro {
         margin-bottom: 2.5em;
         padding: 0;
         font-size: 22px;
         font-weight: $regular;
         line-height: 1.5em;
     }
-    .container-newsletter{
+
+    .container-newsletter {
         padding-bottom: 2.5em;
     }
-    .background-newsletter{
+
+    .background-newsletter {
         border: 15px solid $gray;
         border-radius: 3px;
         position: relative;
         background: $gray;
     }
-    .input-email{
+
+    .input-email {
         margin: 0;
         padding: 0.9375em;
         width: 100%;
@@ -174,7 +200,8 @@ $bold: 700;
         background-color: $gray;
         color: $ligth-purple;
     }
-    .submit-btn{
+
+    .submit-btn {
         display: inline-block;
         padding: 0.9375em 1.25em;
         width: 100%;
@@ -184,20 +211,23 @@ $bold: 700;
         background-color: $purple;
         color: $gray;
     }
-    .submit-btn:hover{
+
+    .submit-btn:hover {
         background-color: $ligth-purple;
     }
+
     //intro-section
 
     //events-section
-    .events-section{
+    .events-section {
         margin: 0;
         margin-top: 2.5em;
         margin-bottom: 2.5em;
         padding: 0 1.25em;
         background: white;
     }
-    .tittle-section{
+
+    .tittle-section {
         margin: 0;
         margin-bottom: 1.25em;
         padding: 0;
@@ -205,14 +235,17 @@ $bold: 700;
         font-weight: $bold;
         color: $purple;
     }
-    .container-event{
+
+    .container-event {
         margin-bottom: 1.25em;
     }
-    .link-event{
+
+    .link-event {
         margin: 0;
         padding: 0;
     }
-    .img-event{
+
+    .img-event {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -220,58 +253,68 @@ $bold: 700;
         background: $gray;
         background-size: contain;
     }
-    .tittle-event{
+
+    .tittle-event {
         margin: 0.3125em 0.9375em;
         padding: 0;
         font-size: 24px;
         font-weight: $bold;
         color: $purple;
     }
-    .icon-info{
+
+    .icon-info {
         margin-right: 0.3125em;
         margin-left: 0.5em;
     }
-    .info-event{
+
+    .info-event {
         margin: 0.3125em 0.9375em;
         padding: 0;
         font-size: 18px;
         font-weight: $regular;
         color: $ligth-purple;
     }
+
     //events-section
 
     //footer
-    .bottom-nav{
+    .bottom-nav {
         margin: 0;
         padding: 0;
         display: flex;
     }
-    .bottom-nav-iteam{
+
+    .bottom-nav-iteam {
         display: block;
         padding: 0;
         padding-right: .8em;
     }
-    .bottom-nav-link{
+
+    .bottom-nav-link {
         color: $gray;
         text-decoration: none;
     }
-    .text-footer{
+
+    .text-footer {
         margin: 0;
         padding: 0;
         font-size: 7px;
     }
-    .logo-footer{
+
+    .logo-footer {
         padding: 0;
         margin: 0;
         width: 102.696px;
         height: 24.535px;
     }
-    .btn-up{
+
+    .btn-up {
         margin-left: 4em;
         margin-top: .25em;
         font-size: 18px;
         text-decoration: none;
         color: $gray;
     }
+
     //footer
 }

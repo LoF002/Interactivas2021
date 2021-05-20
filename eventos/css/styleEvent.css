@@ -192,6 +192,64 @@
     text-align: center;
   }
 
+  .container-popup {
+    background-color: #E3E4E5;
+  }
+
+  .logo-header-popup {
+    padding: 0;
+    margin: 0;
+    height: 33.25px;
+    width: 139.174px;
+  }
+
+  .tittle-modal {
+    color: #23022E;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .sub-tittle-modal {
+    color: #23022E;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  .row-modal {
+    width: 90%;
+  }
+
+  .checkmark {
+    height: 25px;
+    width: 25px;
+    background-color: #573280;
+  }
+
+  .input-modal {
+    width: 6em;
+    border: 0.2em solid #573280;
+    border-radius: 0.2em;
+    text-align: center;
+    background-color: #E3E4E5;
+    color: #573280;
+  }
+
+  .modal-btn {
+    display: inline-block;
+    margin: 0;
+    padding: 0.5em 1.25em;
+    width: 100%;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    background: -webkit-gradient(linear, left top, right top, from(#573280), to(#23022E));
+    background: linear-gradient(to right, #573280, #23022E);
+    color: #E3E4E5;
+    text-transform: uppercase;
+  }
+
   .description-section {
     margin: 0;
     margin-top: 1.25em;
@@ -277,10 +335,6 @@
     color: #23022E;
   }
 
-  .opacity-button {
-    opacity: 1;
-  }
-
   .bottom-nav {
     margin: 0;
     padding: 0;
@@ -319,12 +373,5 @@
     font-size: 18px;
     text-decoration: none;
     color: #E3E4E5;
-  }
-
-  .logo-header-popup {
-    padding: 0;
-    margin: 0;
-    height: 33.25px;
-    width: 139.174px;
   }
 }
