@@ -7,42 +7,48 @@ $bold: 700;
 
 /* Extra small devices (portrait phones, less than 820px) */
 //@media (max-width: 820px)
-@media screen and (max-width: 820px){
+@media screen and (max-width: 820px) {
 
-    body{
+    body {
+        position: relative;
         margin: 0;
         padding: 0;
         font-family: 'Montserrat', sans-serif;
         background: white;
     }
-    header{
+
+    header {
         margin: 0;
         padding: 0 1.25em;
         padding-top: 2.5em;
         padding-bottom: 3.75em;
     }
-    footer{
+
+    footer {
         padding: 1.3125em 1.25em 1.5625em;
-        background: linear-gradient($ligth-purple,$purple);
+        background: linear-gradient($ligth-purple, $purple);
         color: $gray;
     }
-    .container-fluid{
+
+    .container-fluid {
         padding: 0;
         margin: 0;
     }
+
     //background-top
-    .background-top{
+    .background-top {
         background: linear-gradient($purple, $ligth-purple);
     }
     //background-top
     //header
-    .top-bar{
+    .top-bar {
         margin: 0;
         padding: 0;
         width: 100%;
         text-align: center;
     }
-    .background-dark{
+
+    .background-dark {
         display: none;
         position: fixed;
         z-index: 2;
@@ -51,7 +57,8 @@ $bold: 700;
         overflow: auto;
         background-color: rgba(0, 0, 0, 0.65);
     }
-    .top-nav{
+
+    .top-nav {
         padding: 1.25em 1.25em 0;
         padding-bottom: 3.625em;
         margin: 0;
@@ -66,85 +73,98 @@ $bold: 700;
         overflow-y: auto;
         z-index: 3;
     }
-    .top-nav-item{
+
+    .top-nav-item {
         display: block;
         padding: 0;
         margin: 0;
         font-weight: $bold;
         font-size: 20px;
     }
-    .top-nav-link{
+
+    .top-nav-link {
         padding: 0;
         margin: 0;
         display: block;
         color: $purple;
         text-decoration: none;
     }
-    .tittle-categorias{
+
+    .tittle-categorias {
         margin-bottom: 0.5em;
     }
-    .categorias{
+
+    .categorias {
         display: block;
         margin-bottom: 0.3125em;
         padding-left: 0.375em;
         font-size: 16px;
         font-weight: $regular;
     }
-    .mob-menu{
+
+    .mob-menu {
         display: block;
         color: $gray;
         font-size: 2.5em;
         position: absolute;
     }
-    .background-search{
+
+    .background-search {
         padding: 0;
         margin: 0;
         margin-bottom: 1.4375em;
         width: 8.1em;
-        background: linear-gradient(to right, $ligth-purple,$purple);
+        background: linear-gradient(to right, $ligth-purple, $purple);
         border-radius: 3px;
     }
-    .input-search{
+
+    .input-search {
         padding: 0;
         margin: 0.375em;
         width: 7.2271875em;
         border-radius: 3px;
         font-size: 16px;
     }
-    .icon-search{
+
+    .icon-search {
         padding: 0;
         margin-right: 0.375em;
         color: $gray;
     }
-    .mob-close{
+
+    .mob-close {
         display: block;
         color: $ligth-purple;
         font-size: 2.5em;
         position: absolute;
         right: .5em;
     }
-    .logo-header{
+
+    .logo-header {
         padding: 0;
         margin: 0;
         height: 33.25px;
         width: 139.174px;
     }
+
     //header
     //event-section
-    .event-section{
+    .event-section {
         margin: 0;
         padding: 0 1.25em;
         padding-bottom: 2.5em;
         color: $gray;
     }
-    .tittle-event{
+
+    .tittle-event {
         margin: 0;
         margin-bottom: 0.3125em;
         padding: 0;
         font-size: 24px;
         font-weight: $bold;
     }
-    .img-event{
+
+    .img-event {
         margin: 0;
         margin-bottom: 0.3125em;
         padding: 0;
@@ -152,19 +172,22 @@ $bold: 700;
         height: 222px;
         background: $gray;
     }
-    .container-price{
+
+    .container-price {
         margin: 0.3125em 0;
         padding: 0;
         text-align: center;
     }
-    .price{
+
+    .price {
         margin: 0;
         padding: 0;
         color: $gray;
         font-size: 20px;
         font-weight: $bold;
     }
-    .registration-btn{
+
+    .registration-btn {
         display: inline-block;
         margin: 0;
         padding: 0.5em 1.25em;
@@ -178,38 +201,56 @@ $bold: 700;
         text-decoration: none;
         text-align: center;
     }
+
     //event-section
 
     //modals
-    .container-popup{
+    .modal-header{
+        border: none;
+    }
+    .container-popup {
         background-color: $gray;
     }
-    .logo-header-popup{
+
+    .logo-header-popup {
         padding: 0;
         margin: 0;
         height: 33.25px;
         width: 139.174px;
     }
-    .tittle-modal{
+
+    .tittle-modal {
         color: $purple;
         font-weight: $bold;
         font-size: 20px;
     }
-    .sub-tittle-modal{
+
+    .sub-tittle-modal {
         color: $purple;
         font-weight: $regular;
         font-size: 15px;
         text-transform: uppercase;
     }
-    .row-modal{
+
+    .row-modal {
         width: 90%;
+        margin-bottom: 1em;
+        align-items: center;
     }
-    .checkmark{
-        height: 25px;
-        width: 25px;
-        background-color: $ligth-purple;
+
+    .line-modal{
+        height: .05em;
+        width: 100%;
+        background: $ligth-purple;
     }
-    .input-modal{
+
+    .modal-footer{
+        margin-top: 1em;
+        margin-bottom: 2em;
+        border: none;
+    }
+
+    .input-modal {
         width: 6em;
         border: .2em solid $ligth-purple;
         border-radius: .2em;
@@ -217,7 +258,8 @@ $bold: 700;
         background-color: $gray;
         color: $ligth-purple;
     }
-    .modal-btn{
+
+    .modal-btn {
         display: inline-block;
         margin: 0;
         padding: 0.5em 1.25em;
@@ -226,14 +268,14 @@ $bold: 700;
         font-size: 18px;
         font-weight: $bold;
         border: none;
-        background: linear-gradient(to right, $ligth-purple,$purple);
+        background: linear-gradient(to right, $ligth-purple, $purple);
         color: $gray;
         text-transform: uppercase;
     }
     //modal
 
     //description-section
-    .description-section{
+    .description-section {
         margin: 0;
         margin-top: 1.25em;
         margin-bottom: 2.5em;
@@ -241,7 +283,8 @@ $bold: 700;
         background: white;
         text-align: center;
     }
-    .tittle-description{
+
+    .tittle-description {
         margin: 0;
         margin-bottom: 0.3125em;
         padding: 0;
@@ -249,38 +292,44 @@ $bold: 700;
         font-weight: $bold;
         color: $purple;
     }
-    .container-description{
+
+    .container-description {
         text-align: left;
     }
-    .info-event{
+
+    .info-event {
         margin: 0;
         padding: 0;
         font-size: 18px;
         font-weight: $regular;
         color: $ligth-purple;
     }
-    .icon-info{
+
+    .icon-info {
         margin-right: 0.3125em;
         color: $purple;
     }
-    .info-event-description{
+
+    .info-event-description {
         margin: 0;
         padding: 0;
         font-size: 18px;
         font-weight: $regular;
         color: $purple;
     }
+
     //description-section
 
     //related-section
-    .related-section{
+    .related-section {
         margin: 0;
         margin-bottom: 2.5em;
         padding: 0 1.25em;
         background: white;
         text-align: center;
     }
-    .tittle-related{
+
+    .tittle-related {
         margin: 0;
         margin-bottom: 0.3125em;
         padding: 0;
@@ -288,12 +337,14 @@ $bold: 700;
         font-weight: $bold;
         color: $purple;
     }
-    .container-event-related{
+
+    .container-event-related {
         margin: 0;
         padding: 0;
         text-align: left;
     }
-    .img-event-related{
+
+    .img-event-related {
         margin: 0;
         margin-bottom: 0.3125em;
         padding: 0;
@@ -302,7 +353,8 @@ $bold: 700;
         background: $gray;
         background-size: contain;
     }
-    .tittle-event-related{
+
+    .tittle-event-related {
         margin: 0;
         margin-left: 0.9375em;
         padding: 0;
@@ -310,35 +362,41 @@ $bold: 700;
         font-weight: $bold;
         color: $purple;
     }
+
     //related-section
 
     //footer
-    .bottom-nav{
+    .bottom-nav {
         margin: 0;
         padding: 0;
         display: flex;
     }
-    .bottom-nav-iteam{
+
+    .bottom-nav-iteam {
         display: block;
         padding: 0;
         padding-right: .8em;
     }
-    .bottom-nav-link{
+
+    .bottom-nav-link {
         color: $gray;
         text-decoration: none;
     }
-    .text-footer{
+
+    .text-footer {
         margin: 0;
         padding: 0;
         font-size: 7px;
     }
-    .logo-footer{
+
+    .logo-footer {
         padding: 0;
         margin: 0;
         width: 102.696px;
         height: 24.535px;
     }
-    .btn-up{
+
+    .btn-up {
         margin-left: 4em;
         margin-top: .25em;
         font-size: 18px;

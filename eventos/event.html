@@ -102,27 +102,108 @@
                         <p class="sub-tittle-modal">revisar y realizar registro</p>
                         <div class="row row-modal">
                             <div class="col-6">Menor de edad</div>
-                            <div class="col-2"><input class="checkbox" type="checkbox"></div>
+                            <div class="col-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                </div>
+                            </div>
                             <div class="col-4"><input class="input-modal" type="text" placeholder="cantidad"></div>
                         </div>
                         <div class="row row-modal">
                             <div class="col-6">Mayor de edad</div>
-                            <div class="col-2"><input class="checkbox" type="checkbox"></div>
+                            <div class="col-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                </div>
+                            </div>
                             <div class="col-4"><input class="input-modal" type="text" placeholder="cantidad"></div>
                         </div>
+                        <div class="line-modal"></div>
+                        <div class="row">
+                            <div class="col-9">Precio por menor de edad</div>
+                            <div class="col-3">₡1.500</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9">Precio por mayor de edad</div>
+                            <div class="col-3">-</div>
+                        </div>
+                        <div class="line-modal"></div>
+                        <div class="row">
+                            <div class="col-9">Total por menores de edad</div>
+                            <div class="col-3">₡15.000</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9">Total por mayores de edad</div>
+                            <div class="col-3">-</div>
+                        </div>
+                        <div class="line-modal"></div>
+                        <div class="row">
+                            <div class="col-9">Total</div>
+                            <div class="col-3">₡15.000</div>
+                        </div>
+                        <div class="line-modal"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn modal-btn">Siguiente</button>
+                        <button type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">Siguiente</button>
                     </div>
                 </div>
             </div>
         </div>
         <!--restratration-section-->
 
+        <!--form-section-->
+        <div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div><img class="logo-header-popup" src="./img/logoMobileModal.svg" alt="logo"></div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Hide this modal and show the first with the button below.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn modal-btn" data-bs-target="#modal3" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">Finalizar registro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--form-section-->
+
+        <!--resume-section-->
+        <div class="modal fade" id="modal3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--resume-section-->
+
         <!--description-section-->
         <section class="description-section">
             <h4 class="tittle-description">Descripción del evento</h4>
             <div class="row container-description">
+                <div class="col-12">
+                    <p class="info-event-description"><span class="fas fa-map-marker-alt icon-info"></span>Lugar en
+                        donde se realizará</p>
+                </div>
+                <div class="col-12">
+                    <p class="info-event-description"><span class="far fa-calendar-alt icon-info"></span>Fecha y hora
+                    </p>
+                </div>
+                <div class="col-12">
+                    <p class="info-event-description"><span class="fas fa-tag icon-info"></span>Categoría</p>
+                </div>
                 <div class="col-12">
                     <p class="info-event">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat
                         purus vitae eros dapibus, id lacinia ex lacinia. Curabitur posuere nulla nibh, at volutpat erat
@@ -136,17 +217,6 @@
                         imperdiet nec. Integer ac velit at eros imperdiet varius non ullamcorper dui. Aliquam ut
                         elementum leo. Vivamus et viverra ipsum. Cras vitae turpis eget mi vestibulum sollicitudin eget
                         eu mi. Nulla condimentum venenatis lectus, in commodo tortor facilisis a.</p>
-                </div>
-                <div class="col-12">
-                    <p class="info-event-description"><span class="fas fa-map-marker-alt icon-info"></span>Lugar en
-                        donde se realizará</p>
-                </div>
-                <div class="col-12">
-                    <p class="info-event-description"><span class="far fa-calendar-alt icon-info"></span>Fecha y hora
-                    </p>
-                </div>
-                <div class="col-12">
-                    <p class="info-event-description"><span class="fas fa-tag icon-info"></span>Categoría</p>
                 </div>
             </div>
         </section>
