@@ -205,6 +205,9 @@ $bold: 700;
     //event-section
 
     //modals
+    .modal{
+        color: $purple;
+    }
     .modal-header{
         border: none;
     }
@@ -239,18 +242,33 @@ $bold: 700;
     }
 
     .line-modal{
-        height: .05em;
+        height: .06em;
         width: 100%;
         background: $ligth-purple;
     }
-
+    .form-modal{
+        margin: 0;
+        margin-top: .5em;
+    }
+    .tittle-form{
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+    .input-form{
+        margin: .2em 0;
+        width: 100%;
+        border: .2em solid $ligth-purple;
+        border-radius: .2em;
+        background-color: $gray;
+        color: $ligth-purple;
+    }
     .modal-footer{
         margin-top: 1em;
         margin-bottom: 2em;
         border: none;
     }
-
-    .input-modal {
+    .input-cantidad {
         width: 6em;
         border: .2em solid $ligth-purple;
         border-radius: .2em;
@@ -271,6 +289,44 @@ $bold: 700;
         background: linear-gradient(to right, $ligth-purple, $purple);
         color: $gray;
         text-transform: uppercase;
+    }
+    .header-resume{
+        text-align: center;
+    }
+    .check{
+        height: 106px;
+        width: 106px;
+        color: $ligth-purple;
+    }
+    .tittle-resume{
+        margin: auto;
+        margin-top: 1em;
+        font-size: 20px;
+        font-weight: $bold;
+        text-transform: uppercase;
+        color: $ligth-purple;
+    }
+    .resumen{
+        margin-bottom: 2em;
+        color: $ligth-purple;
+    }
+    .subtittle-resume{
+        margin-bottom: .5em;
+        font-size: 20px;
+    }
+    .form-check{
+        margin-bottom: .5em;
+    }
+    .metodos-pago-mobile{
+        margin-bottom: 1em;
+    }
+    .logo-visa-mobile{
+        margin: 0 1em;
+        width: 60px;
+    }
+    .logo-paypal-mobile{
+        margin: 0 2.25em;
+        width: 20px;
     }
     //modal
 

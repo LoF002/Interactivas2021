@@ -108,7 +108,7 @@
                                     <label class="form-check-label" for="flexCheckDefault"></label>
                                 </div>
                             </div>
-                            <div class="col-4"><input class="input-modal" type="text" placeholder="cantidad"></div>
+                            <div class="col-4"><input class="input-cantidad" type="text" placeholder="cantidad"></div>
                         </div>
                         <div class="row row-modal">
                             <div class="col-6">Mayor de edad</div>
@@ -118,7 +118,7 @@
                                     <label class="form-check-label" for="flexCheckDefault"></label>
                                 </div>
                             </div>
-                            <div class="col-4"><input class="input-modal" type="text" placeholder="cantidad"></div>
+                            <div class="col-4"><input class="input-cantidad" type="text" placeholder="cantidad"></div>
                         </div>
                         <div class="line-modal"></div>
                         <div class="row">
@@ -157,13 +157,44 @@
         <!--form-section-->
         <div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content container-popup">
                     <div class="modal-header">
                         <div><img class="logo-header-popup" src="./img/logoMobileModal.svg" alt="logo"></div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        Hide this modal and show the first with the button below.
+
+                        <h5 class="tittle-modal">Título o nombre del evento</h5>
+                        <p class="sub-tittle-modal">métodos de pago</p>
+
+                        <div class="metodos-pago-mobile">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <img class="logo-visa-mobile" src="./img/visaMobile.svg" alt="logo visa">
+                                <label class="form-check-label" for="flexRadioDefault1">VISA</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <img class="logo-paypal-mobile" src="./img/paypalMobile.svg" alt="logo paypal">
+                                <label class="form-check-label" for="flexRadioDefault2">Paypal</label>
+                            </div>
+                        </div>
+
+                        <div class="line-modal"></div>
+                        <div class="row">
+                            <div class="col-9">Total</div>
+                            <div class="col-3">₡15.000</div>
+                        </div>
+                        <div class="line-modal"></div>
+
+                        <div class="form-modal">
+                            <p class="tittle-form">Registro a nombre de</p>
+                            <input class="input-form" type="text" placeholder="Nombre completo">
+                            <input class="input-form" type="text" placeholder="Correo electrónico">
+                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn modal-btn" data-bs-target="#modal3" data-bs-toggle="modal"
@@ -177,12 +208,41 @@
         <!--resume-section-->
         <div class="modal fade" id="modal3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
+                <div class="modal-content container-popup">
+                    <div class="modal-header header-resume">
+                        <div class="row">
+                            <div class="col-12"><img class="check" src="./img/check-resume-mobile.svg"
+                                    alt="check-resume-mobile"></div>
+                            <div class="col-12">
+                                <p class="tittle-resume">¡Registro finalizado!</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-body">
-                    </div>
-                    <div class="modal-footer">
+                        <div class="resumen">
+                            <div class="subtittle-resume">Resumen</div>
+
+                            <div class="line-modal"></div>
+                            <div class="row">
+                                <div class="col-9">Título o nombre del evento</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">Nombre completo</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">Correo electrónico</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">Método de pago</div>
+                                <div class="col-3">VISA</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">Total</div>
+                                <div class="col-3">₡15.000</div>
+                            </div>
+                            <div class="line-modal"></div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>

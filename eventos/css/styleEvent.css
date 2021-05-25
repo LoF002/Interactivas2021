@@ -193,6 +193,10 @@
     text-align: center;
   }
 
+  .modal {
+    color: #23022E;
+  }
+
   .modal-header {
     border: none;
   }
@@ -230,9 +234,29 @@
   }
 
   .line-modal {
-    height: 0.05em;
+    height: 0.06em;
     width: 100%;
     background: #573280;
+  }
+
+  .form-modal {
+    margin: 0;
+    margin-top: 0.5em;
+  }
+
+  .tittle-form {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  .input-form {
+    margin: 0.2em 0;
+    width: 100%;
+    border: 0.2em solid #573280;
+    border-radius: 0.2em;
+    background-color: #E3E4E5;
+    color: #573280;
   }
 
   .modal-footer {
@@ -241,7 +265,7 @@
     border: none;
   }
 
-  .input-modal {
+  .input-cantidad {
     width: 6em;
     border: 0.2em solid #573280;
     border-radius: 0.2em;
@@ -263,6 +287,53 @@
     background: linear-gradient(to right, #573280, #23022E);
     color: #E3E4E5;
     text-transform: uppercase;
+  }
+
+  .header-resume {
+    text-align: center;
+  }
+
+  .check {
+    height: 106px;
+    width: 106px;
+    color: #573280;
+  }
+
+  .tittle-resume {
+    margin: auto;
+    margin-top: 1em;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #573280;
+  }
+
+  .resumen {
+    margin-bottom: 2em;
+    color: #573280;
+  }
+
+  .subtittle-resume {
+    margin-bottom: 0.5em;
+    font-size: 20px;
+  }
+
+  .form-check {
+    margin-bottom: 0.5em;
+  }
+
+  .metodos-pago-mobile {
+    margin-bottom: 1em;
+  }
+
+  .logo-visa-mobile {
+    margin: 0 1em;
+    width: 60px;
+  }
+
+  .logo-paypal-mobile {
+    margin: 0 2.25em;
+    width: 20px;
   }
 
   .description-section {
