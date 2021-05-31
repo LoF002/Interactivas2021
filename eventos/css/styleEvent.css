@@ -191,7 +191,7 @@ footer {
 
 .related-section {
   margin: 0;
-  margin-bottom: 2.5em;
+  margin-bottom: 5em;
   padding: 0 15em;
   background: white;
   text-align: center;
@@ -209,15 +209,14 @@ footer {
 .container-event-related {
   margin: 0;
   padding: 0;
-  text-align: left;
 }
 
 .img-event-related {
   margin: 0;
-  margin-bottom: 0.3125em;
+  margin-bottom: 1em;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   background: #E3E4E5;
   background-size: contain;
 }
@@ -226,9 +225,17 @@ footer {
   margin: 0;
   margin-left: 0.9375em;
   padding: 0;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   color: #23022E;
+}
+
+.carousel-control-next-icon {
+  background-image: url(/img/next.svg);
+}
+
+.carousel-control-prev-icon {
+  background-image: url(/img/prev.svg);
 }
 
 .bottom-nav {
@@ -268,6 +275,158 @@ footer {
   text-decoration: none;
   color: #E3E4E5;
   float: left;
+}
+
+.modal {
+  color: #23022E;
+}
+
+.btn-close {
+  background-image: url(/img/close.svg);
+  font-size: 2em;
+  opacity: none;
+}
+
+.modal-header {
+  border: none;
+}
+
+.container-popup {
+  background-color: #E3E4E5;
+}
+
+.logo-header-popup {
+  padding: 0;
+  margin: 0;
+  height: 40px;
+}
+
+.tittle-modal {
+  color: #23022E;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.sub-tittle-modal {
+  color: #23022E;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.row-modal {
+  width: 90%;
+  margin-bottom: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.line-modal {
+  height: 0.06em;
+  width: 100%;
+  background: #573280;
+}
+
+.form-modal {
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+.tittle-form {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.input-form {
+  margin: 0.2em 0;
+  width: 100%;
+  border: 0.2em solid #573280;
+  border-radius: 0.2em;
+  background-color: #E3E4E5;
+  color: #573280;
+}
+
+.modal-footer {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border: none;
+}
+
+.input-cantidad {
+  width: 6em;
+  border: 0.2em solid #573280;
+  border-radius: 0.2em;
+  text-align: center;
+  background-color: #E3E4E5;
+  color: #573280;
+}
+
+.modal-btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5em 1.25em;
+  width: 100%;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#573280), to(#23022E));
+  background: linear-gradient(to right, #573280, #23022E);
+  color: #E3E4E5;
+  text-transform: uppercase;
+}
+
+.header-resume {
+  text-align: center;
+  display: block;
+}
+
+.check {
+  width: 106px;
+  color: #573280;
+}
+
+.tittle-resume {
+  margin: auto;
+  margin-top: 1em;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #573280;
+}
+
+.resumen {
+  margin-bottom: 2em;
+  color: #573280;
+}
+
+.subtittle-resume {
+  margin-bottom: 0.5em;
+  font-size: 20px;
+}
+
+.form-check {
+  margin-bottom: 0.5em;
+}
+
+.metodos-pago-mobile {
+  margin-bottom: 1em;
+}
+
+.logo-visa-mobile {
+  margin: 0 1em;
+  width: 60px;
+}
+
+.logo-paypal-mobile {
+  margin: 0 2.25em;
+  width: 20px;
+}
+
+.btn:hover {
+  color: #E3E4E5;
 }
 
 /* Extra small devices (portrait phones, less than 820px) */
@@ -449,149 +608,6 @@ footer {
     color: #23022E;
   }
 
-  .modal {
-    color: #23022E;
-  }
-
-  .modal-header {
-    border: none;
-  }
-
-  .container-popup {
-    background-color: #E3E4E5;
-  }
-
-  .logo-header-popup {
-    padding: 0;
-    margin: 0;
-    height: 33.25px;
-    width: 139.174px;
-  }
-
-  .tittle-modal {
-    color: #23022E;
-    font-weight: 700;
-    font-size: 20px;
-  }
-
-  .sub-tittle-modal {
-    color: #23022E;
-    font-weight: 400;
-    font-size: 15px;
-    text-transform: uppercase;
-  }
-
-  .row-modal {
-    width: 90%;
-    margin-bottom: 1em;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  .line-modal {
-    height: 0.06em;
-    width: 100%;
-    background: #573280;
-  }
-
-  .form-modal {
-    margin: 0;
-    margin-top: 0.5em;
-  }
-
-  .tittle-form {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-  }
-
-  .input-form {
-    margin: 0.2em 0;
-    width: 100%;
-    border: 0.2em solid #573280;
-    border-radius: 0.2em;
-    background-color: #E3E4E5;
-    color: #573280;
-  }
-
-  .modal-footer {
-    margin-top: 1em;
-    margin-bottom: 2em;
-    border: none;
-  }
-
-  .input-cantidad {
-    width: 6em;
-    border: 0.2em solid #573280;
-    border-radius: 0.2em;
-    text-align: center;
-    background-color: #E3E4E5;
-    color: #573280;
-  }
-
-  .modal-btn {
-    display: inline-block;
-    margin: 0;
-    padding: 0.5em 1.25em;
-    width: 100%;
-    border-radius: 3px;
-    font-size: 18px;
-    font-weight: 700;
-    border: none;
-    background: -webkit-gradient(linear, left top, right top, from(#573280), to(#23022E));
-    background: linear-gradient(to right, #573280, #23022E);
-    color: #E3E4E5;
-    text-transform: uppercase;
-  }
-
-  .header-resume {
-    text-align: center;
-  }
-
-  .check {
-    height: 106px;
-    width: 106px;
-    color: #573280;
-  }
-
-  .tittle-resume {
-    margin: auto;
-    margin-top: 1em;
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #573280;
-  }
-
-  .resumen {
-    margin-bottom: 2em;
-    color: #573280;
-  }
-
-  .subtittle-resume {
-    margin-bottom: 0.5em;
-    font-size: 20px;
-  }
-
-  .form-check {
-    margin-bottom: 0.5em;
-  }
-
-  .metodos-pago-mobile {
-    margin-bottom: 1em;
-  }
-
-  .logo-visa-mobile {
-    margin: 0 1em;
-    width: 60px;
-  }
-
-  .logo-paypal-mobile {
-    margin: 0 2.25em;
-    width: 20px;
-  }
-
   .description-section {
     margin: 0;
     margin-top: 1.25em;
@@ -720,5 +736,147 @@ footer {
     text-decoration: none;
     color: #E3E4E5;
     float: none;
+  }
+
+  .modal {
+    color: #23022E;
+  }
+
+  .modal-header {
+    border: none;
+  }
+
+  .container-popup {
+    background-color: #E3E4E5;
+  }
+
+  .logo-header-popup {
+    padding: 0;
+    margin: 0;
+    height: 40px;
+  }
+
+  .tittle-modal {
+    color: #23022E;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .sub-tittle-modal {
+    color: #23022E;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  .row-modal {
+    width: 90%;
+    margin-bottom: 1em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .line-modal {
+    height: 0.06em;
+    width: 100%;
+    background: #573280;
+  }
+
+  .form-modal {
+    margin: 0;
+    margin-top: 0.5em;
+  }
+
+  .tittle-form {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  .input-form {
+    margin: 0.2em 0;
+    width: 100%;
+    border: 0.2em solid #573280;
+    border-radius: 0.2em;
+    background-color: #E3E4E5;
+    color: #573280;
+  }
+
+  .modal-footer {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border: none;
+  }
+
+  .input-cantidad {
+    width: 6em;
+    border: 0.2em solid #573280;
+    border-radius: 0.2em;
+    text-align: center;
+    background-color: #E3E4E5;
+    color: #573280;
+  }
+
+  .modal-btn {
+    display: inline-block;
+    margin: 0;
+    padding: 0.5em 1.25em;
+    width: 100%;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    background: -webkit-gradient(linear, left top, right top, from(#573280), to(#23022E));
+    background: linear-gradient(to right, #573280, #23022E);
+    color: #E3E4E5;
+    text-transform: uppercase;
+  }
+
+  .header-resume {
+    text-align: center;
+  }
+
+  .check {
+    height: 106px;
+    width: 106px;
+    color: #573280;
+  }
+
+  .tittle-resume {
+    margin: auto;
+    margin-top: 1em;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #573280;
+  }
+
+  .resumen {
+    margin-bottom: 2em;
+    color: #573280;
+  }
+
+  .subtittle-resume {
+    margin-bottom: 0.5em;
+    font-size: 20px;
+  }
+
+  .form-check {
+    margin-bottom: 0.5em;
+  }
+
+  .metodos-pago-mobile {
+    margin-bottom: 1em;
+  }
+
+  .logo-visa-mobile {
+    margin: 0 1em;
+    width: 60px;
+  }
+
+  .logo-paypal-mobile {
+    margin: 0 2.25em;
+    width: 20px;
   }
 }

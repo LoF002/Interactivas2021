@@ -24,6 +24,10 @@ footer {
     color: $gray;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container-fluid {
     padding: 0;
     margin: 0;
@@ -33,15 +37,14 @@ footer {
 .background-top {
     background: linear-gradient($purple, $ligth-purple);
 }
-
 //background-top
 
 //header
 .logo-header {
     margin: 0;
     padding: 0;
-    float: left;
     height: 70px;
+    float: left;
 }
 
 .mob-menu {
@@ -53,6 +56,7 @@ footer {
 }
 
 .top-bar {
+    margin: 0;
     padding-bottom: 5em;
     width: 100%;
 }
@@ -276,12 +280,8 @@ footer {
 //@media (max-width: 820px)
 //@media screen and (max-width: 400px) {
 @media (max-width: 820px) {
-    html {
-        scroll-behavior: smooth;
-    }
 
     header {
-        margin: 0;
         padding: 0 1.25em;
         padding-top: 2.5em;
         padding-bottom: 3.75em;
@@ -295,9 +295,7 @@ footer {
 
     //header
     .top-bar {
-        margin: 0;
         padding: 0;
-        width: 100%;
         text-align: center;
     }
 
@@ -360,13 +358,9 @@ footer {
 
     .mob-menu {
         display: block;
+        position: absolute;
         color: $gray;
         font-size: 2.5em;
-        position: absolute;
-    }
-
-    .categorias-mobile {
-        display: block;
     }
 
     .background-search {
@@ -395,17 +389,14 @@ footer {
 
     .mob-close {
         display: block;
+        position: absolute;
         color: $ligth-purple;
         font-size: 2.5em;
-        position: absolute;
         right: .5em;
     }
 
     .logo-header {
-        padding: 0;
-        margin: 0;
         height: 33.25px;
-        width: 139.174px;
         float: none;
     }
 
@@ -591,7 +582,5 @@ footer {
         color: $gray;
         float: none;
     }
-
-
     //footer
 }
