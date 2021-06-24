@@ -114,8 +114,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <h5 class="tittle-modal">{{ events[selectedEvent].title }}</h5>
-                        <p class="sub-tittle-modal">revisar y realizar registro</p>
+                        <h5 class="tittle-modal">{{events[selectedEvent].title}}</h5>
+                        <p class="sub-tittle-modal">revisar y realizar registro, cupos disponibles {{events[selectedEvent].inventory}}</p>
 
                         <div class="row">
                             <div class="col-auto">
@@ -128,30 +128,33 @@
                             </div>
                             <div class="col-1">
                                 <label for="quantityK" class="visually-hidden">Qty</label>
-                                <input type="number" v-model="qtyK" class="input-C pt-sm-0 pb-sm-0" id="quantityK" placeholder="0" required>
+                                <input type="number" min="0" v-bind:max="events[selectedEvent].inventory" v-model="qtyK" v-on:blur="checkInventory" class="input-C pt-sm-0 pb-sm-0" id="quantityK" placeholder="0" required>
                                 <label for="quantityA" class="visually-hidden">Qty</label>
-                                <input type="number" v-model="qtyA" class="input-C pt-sm-0 pb-sm-0 mt-1" id="quantityA" placeholder="0" required>
+                                <input type="number" min="0" v-bind:max="events[selectedEvent].inventory" v-model="qtyA" v-on:blur="checkInventory" class="input-C pt-sm-0 pb-sm-0 mt-1" id="quantityA" placeholder="0" required>
                             </div>
                         </div>
 
                         <div class="line-modal"></div>
                         <div class="row">
                             <div class="col-9">Total por menores de edad</div>
-                            <div class="col-3">₡{{ qtyK*events[selectedEvent].priceK }}</div>
+                            <div class="col-3">₡{{qtyK*events[selectedEvent].priceK}}</div>
                         </div>
                         <div class="row">
                             <div class="col-9">Total por mayores de edad</div>
-                            <div class="col-3">₡{{ qtyA*events[selectedEvent].priceA }}</div>
+                            <div class="col-3">₡{{qtyA*events[selectedEvent].priceA}}</div>
                         </div>
                         <div class="line-modal"></div>
                         <div class="row">
                             <div class="col-9">Total</div>
-                            <div class="col-3">₡{{ (qtyK*events[selectedEvent].priceK) + (qtyA*events[selectedEvent].priceA) }}</div>
+                            <div class="col-3">₡{{(qtyK*events[selectedEvent].priceK) + (qtyA*events[selectedEvent].priceA)}}</div>
                         </div>
                         <div class="line-modal"></div>
                     </div>
                     <div class="modal-footer">
-                        <button v-on:click="chargeTotal((qtyK*events[selectedEvent].priceK) + (qtyA*events[selectedEvent].priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
+
+                        <button v-if="available" v-on:click="chargeTotal((qtyK*events[selectedEvent].priceK) + (qtyA*events[selectedEvent].priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
+                        <button v-else type="button" class="btn modal-btn" disabled>Siguiente</button>
+
                     </div>
                 </div>
             </div>
@@ -168,7 +171,7 @@
                     </div>
                     <div class="modal-body">
 
-                        <h5 class="tittle-modal">Título o nombre del evento</h5>
+                        <h5 class="tittle-modal">{{events[selectedEvent].title}}</h5>
                         <p class="sub-tittle-modal">métodos de pago</p>
 
                         <div class="metodos-pago-mobile">

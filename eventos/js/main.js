@@ -1,8 +1,8 @@
 const app = Vue.createApp({
     data() {
         return {
-            qtyK: 0,
             qtyA: 0,
+            qtyK: 0,
             selectedEvent: 0,
             total: 0,
             inventory: 0,
@@ -22,7 +22,7 @@ const app = Vue.createApp({
                     priceA: 10000,
                     priceK: 5000,
                     available: true,
-                    inventory: 200
+                    inventory: 10
                 },
                 {
                     id: 102,
@@ -48,7 +48,7 @@ const app = Vue.createApp({
                     priceA: 8000,
                     priceK: 3000,
                     available: true,
-                    inventory: 200
+                    inventory: 10
                 },
                 {
                     id: 103,
@@ -98,6 +98,17 @@ const app = Vue.createApp({
         },
         chargeTotal(total) {
             this.total = total;
+        },
+        checkInventory() {
+            let allqty = 0;
+            allqty += Number(this.qtyK) + Number(this.qtyA);
+            console.log(allqty);
+            if (allqty > this.events[this.selectedEvent].inventory) {
+                this.available = false;
+            } else {
+                this.available = true;
+            }
+
         }
     }
 });
