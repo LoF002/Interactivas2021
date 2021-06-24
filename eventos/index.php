@@ -109,7 +109,7 @@
             <div class="row">
 
                 <div v-for="(event, index) in events" class="col-md-4 card container-event">
-                    <a href="./event.php"><img v-bind:src="event.image" class="card-img-top" v-bind:alt="event.title"></a>
+                    <a v-on:click="showEventDetails(index)" href="./event.php"><img v-bind:src="event.image" class="card-img-top" v-bind:alt="event.title"></a>
                     <div class="card-body shadow">
                         <h5 class="card-title tittle-event">{{ event.title }}</h5>
                         <p class="card-text text-truncate info-event"><span class="fas fa-map-marker-alt icon-info"></span>{{ event.location }}</p>

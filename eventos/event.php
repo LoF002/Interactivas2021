@@ -93,10 +93,10 @@
 
             <!--event-section-->
             <section class="event-section">
-                <h3 class="tittle-event">Título o nombre</h3>
-                <img class="img-event" src="./img/event01.png" alt="mountainbike">
+                <h3 class="tittle-event">{{ events[selectedEvent].title }}</h3>
+                <img class="img-event" v-bind:src="events[selectedEvent].image" v-bind:alt="events[selectedEvent].title">
                 <div class="container-price">
-                    <p class="price">₡3.000</p>
+                    <p class="price">₡{{ events[selectedEvent].priceA}}</p>
                 </div>
                 <button type="button" class="btn registration-btn" data-bs-toggle="modal" data-bs-target="#modalRegistration">registrarse</button>
             </section>
@@ -114,7 +114,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <h5 class="tittle-modal">Título o nombre del evento</h5>
+                        <h5 class="tittle-modal">{{ events[selectedEvent].title }}</h5>
                         <p class="sub-tittle-modal">revisar y realizar registro</p>
 
                         <div class="row">
@@ -123,8 +123,8 @@
                                 <p>Mayor de edad</p>
                             </div>
                             <div class="col-auto">
-                                <p>Valor: ₡{{priceK}} </p>
-                                <p>Valor: ₡{{priceA}} </p>
+                                <p>Valor: ₡{{events[selectedEvent].priceK}} </p>
+                                <p>Valor: ₡{{events[selectedEvent].priceA}} </p>
                             </div>
                             <div class="col-1">
                                 <label for="quantityK" class="visually-hidden">Qty</label>
@@ -137,21 +137,21 @@
                         <div class="line-modal"></div>
                         <div class="row">
                             <div class="col-9">Total por menores de edad</div>
-                            <div class="col-3">₡{{ qtyK*priceK }}</div>
+                            <div class="col-3">₡{{ qtyK*events[selectedEvent].priceK }}</div>
                         </div>
                         <div class="row">
                             <div class="col-9">Total por mayores de edad</div>
-                            <div class="col-3">₡{{ qtyA*priceA }}</div>
+                            <div class="col-3">₡{{ qtyA*events[selectedEvent].priceA }}</div>
                         </div>
                         <div class="line-modal"></div>
                         <div class="row">
                             <div class="col-9">Total</div>
-                            <div class="col-3">₡{{ (qtyK*priceK) + (qtyA*priceA) }}</div>
+                            <div class="col-3">₡{{ (qtyK*events[selectedEvent].priceK) + (qtyA*events[selectedEvent].priceA) }}</div>
                         </div>
                         <div class="line-modal"></div>
                     </div>
                     <div class="modal-footer">
-                        <button v-on:click="chargeTotal((qtyK*priceK) + (qtyA*priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
+                        <button v-on:click="chargeTotal((qtyK*events[selectedEvent].priceK) + (qtyA*events[selectedEvent].priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
                     </div>
                 </div>
             </div>
@@ -257,29 +257,16 @@
             <h4 class="tittle-description">Descripción del evento</h4>
             <div class="row container-description">
                 <div class="col-12">
-                    <p class="info-event-description"><span class="fas fa-map-marker-alt icon-info"></span>Lugar en
-                        donde se realizará</p>
+                    <p class="info-event-description"><span class="fas fa-map-marker-alt icon-info"></span>{{ events[selectedEvent].location }}</p>
                 </div>
                 <div class="col-12">
-                    <p class="info-event-description"><span class="far fa-calendar-alt icon-info"></span>Fecha y hora
-                    </p>
+                    <p class="info-event-description"><span class="far fa-calendar-alt icon-info"></span>{{ events[selectedEvent].date }}</p>
                 </div>
                 <div class="col-12">
-                    <p class="info-event-description"><span class="fas fa-tag icon-info"></span>Categoría</p>
+                    <p class="info-event-description"><span class="fas fa-tag icon-info"></span>{{ events[selectedEvent].category }}</p>
                 </div>
                 <div class="col-12">
-                    <p class="info-event">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat
-                        purus vitae eros dapibus, id lacinia ex lacinia. Curabitur posuere nulla nibh, at volutpat erat
-                        dapibus eget. Nam varius pulvinar sem ut condimentum. Vivamus nisl purus, auctor sed erat in,
-                        lobortis blandit urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus
-                        pharetra diam, id sollicitudin sapien posuere tempus. Quisque gravida pharetra urna in dapibus.
-                        Fusce a dolor a erat volutpat rhoncus vel eget nibh. Pellentesque lacinia suscipit sapien, et
-                        venenatis est mattis eu. Cras finibus porta varius.<br>Integer vel molestie tortor. Nam accumsan
-                        nec risus vel bibendum. Vestibulum congue quis nibh ac porta. Pellentesque sit amet purus
-                        volutpat, hendrerit lorem eu, eleifend nisl. Integer congue molestie urna, non dignissim sapien
-                        imperdiet nec. Integer ac velit at eros imperdiet varius non ullamcorper dui. Aliquam ut
-                        elementum leo. Vivamus et viverra ipsum. Cras vitae turpis eget mi vestibulum sollicitudin eget
-                        eu mi. Nulla condimentum venenatis lectus, in commodo tortor facilisis a.</p>
+                    <p class="info-event">{{ events[selectedEvent].description }}</p>
                 </div>
             </div>
         </section>
