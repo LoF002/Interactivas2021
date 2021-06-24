@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  font-family: 'Varela Round', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.s-top {
+  background-color: #06090b;
+}
+
+.c_top {
+  background-color: #06090b;
+}
+
+@media only screen and (max-width: 480px) {
+  .logo_container {
+    width: 250px;
+    padding-left: 50px;
+  }
+}
+
+.header_containers {
+  width: 50%;
+  height: auto;
+}
+
+.lupa_btn {
+  background-color: #fff;
+}
+
+.lupa_btn:hover {
+  background-color: #FFEA4D;
+  color: #fff;
+}
+
+.lupa {
+  padding: 0.5px;
+}
+
+.s-outstanding {
+  margin-left: 20vw;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .s-outstanding {
+    margin-left: 0px;
+    margin-top: 85px;
+  }
+}
+
+#destacado {
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.ostd-card {
+  position: static;
+  border: 1px solid #807526;
+}
+
+.d_basic h4 {
+  font-weight: 800;
+}
+
+.data_basic h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.flecha_I {
+  width: 5em;
+}
+
+.flecha_D {
+  width: 5em;
+}
+
+.filter_container {
+  background-color: #06090b;
+  border-radius: 5px;
+  color: #fff;
+  width: 15vw;
+}
+
+@media only screen and (max-width: 480px) {
+  .filter_container {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.s-main {
+  border-top: #06090b solid 1px;
+}
+
+@media only screen and (max-width: 480px) {
+  .s-main {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.container_casilla input:checked {
+  background-color: #807526;
+}
+
+.container_casilla input:hover {
+  background-color: #FFEA4D;
+}
+
+.b_details {
+  background-color: #0d0533f8;
+  color: #fff;
+  border: solid black 1px;
+  border-radius: 5%;
+}
+
+.b_details:hover {
+  background-color: #fff;
+  border: solid #0d0533f8 1px;
+  color: #0d0533f8;
+}
+
+.f_container {
+  border-radius: 5px;
+  border: solid 1px #fff;
+}
+
+.card_container {
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  .card_container {
+    padding-left: 0px;
+  }
+}
+
+.footer_container {
+  background-color: #06090b;
+  color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .footer_container {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .c_msg {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contac_container {
+    width: 80vw;
+    margin-left: 40px;
+  }
+}
+
+.input_C {
+  width: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+  .input_C {
+    width: 25px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.carousel_container {
+  background-color: #0d05334b;
+}
+/*# sourceMappingURL=style.css.map */

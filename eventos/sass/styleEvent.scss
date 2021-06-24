@@ -76,6 +76,9 @@ footer {
     font-size: 25px;
     font-weight: $bold;
 }
+.top-nav-link:hover{
+    color: $ligth-purple;       
+}
 
 .background-search {
     padding: .3em;
@@ -156,6 +159,9 @@ footer {
     border: none;
     background-color: $gray;
     color: $purple;
+}
+.registration-btn:hover{
+    background-color: $purple;
 }
 //event-section
 
@@ -331,6 +337,10 @@ footer {
     width: 90%;
     margin-bottom: 1em;
     align-items: center;
+}
+
+.input-C{
+    width: 60px;
 }
 
 .line-modal {

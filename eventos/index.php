@@ -6,18 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Name</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous">
-    </script>
+
+    <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!--fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!--css-->
     <link rel="stylesheet" href="./css/style.css" rel="stylesheet">
+
+    <!--vue-->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div id="app" class="container-fluid">
         <!--background-->
         <div class="background-top">
             <!--header-->
@@ -39,9 +48,7 @@
                             <nav class="navbar">
                                 <div class="dropdown">
 
-                                    <a class="top-nav-link tittle-categorias dropdown-toggle" href="#" role="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                        aria-expanded="false">Categorías</a>
+                                    <a class="top-nav-link tittle-categorias dropdown-toggle" href="#" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
 
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li><a class="dropdown-item top-nav-link" href="#">Ciclismo</a></li>
@@ -74,7 +81,7 @@
                                 </div>
                             </nav>
                         </li>
-                        
+
                     </ul>
                     <a href="#"><img class="logo-header" src="./img/logoMobile.svg" alt="logo"></a>
                 </nav>
@@ -86,7 +93,7 @@
                 <h2 class="subtittle-intro">¿Quieres estar el tanto de todos los eventos y festivales?</h2>
                 <div class="container-newsletter">
                     <div class="background-newsletter">
-                        <li><input class="input-email" type="email" placeholder="Su correo electrónico"></li>
+                        <input class="input-email" type="email" placeholder="Su correo electrónico">
                         <input class="submit-btn" type="submit" value="suscribirse al boletín">
                     </div>
                 </div>
@@ -98,137 +105,21 @@
         <!--events-section-->
         <section class="events-section">
             <h2 class="tittle-section">Sección - Categoría</h2>
-            <div class="row row-events">
-                <div class="col">
-                    <div class="container-event">
-                        <a class="link-event" href="./event.php">
-                            <img class="img-event" src="./img/mountainbike.png" alt="mountainbike">
-                        </a>
-                        <h3 class="tittle-event">Título o nombre</h3>
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-map-marker-alt icon-info"></span>Lugar en
-                                    donde se realizará</p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="far fa-calendar-alt icon-info"></span>Fecha y hora
-                                </p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-tag icon-info"></span>Categoría</p>
-                            </div>
-                        </div>
+
+            <div class="row">
+
+                <div v-for="(event, index) in events" class="col-md-4 card container-event">
+                    <a href="./event.php"><img v-bind:src="event.image" class="card-img-top" v-bind:alt="event.title"></a>
+                    <div class="card-body shadow">
+                        <h5 class="card-title tittle-event">{{ event.title }}</h5>
+                        <p class="card-text text-truncate info-event"><span class="fas fa-map-marker-alt icon-info"></span>{{ event.location }}</p>
+                        <p class="card-text text-truncate info-event"><span class="far fa-calendar-alt icon-info"></span>{{ event.date }}</p>
+                        <p class="card-text text-truncate info-event"><span class="fas fa-tag icon-info"></span>{{ event.category }}</p>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="container-event">
-                        <a class="link-event" href="./event.php">
-                            <img class="img-event" src="./img/mountainbike.png" alt="mountainbike">
-                        </a>
-                        <h3 class="tittle-event">Título o nombre</h3>
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-map-marker-alt icon-info"></span>Lugar en
-                                    donde se realizará</p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="far fa-calendar-alt icon-info"></span>Fecha y hora
-                                </p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-tag icon-info"></span>Categoría</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container-event">
-                        <a class="link-event" href="./event.php">
-                            <img class="img-event" src="./img/mountainbike.png" alt="mountainbike">
-                        </a>
-                        <h3 class="tittle-event">Título o nombre</h3>
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-map-marker-alt icon-info"></span>Lugar en
-                                    donde se realizará</p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="far fa-calendar-alt icon-info"></span>Fecha y hora
-                                </p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-tag icon-info"></span>Categoría</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
-            <div class="row row-events">
-                <div class="col">
-                    <div class="container-event">
-                        <a class="link-event" href="./event.php">
-                            <img class="img-event" src="./img/mountainbike.png" alt="mountainbike">
-                        </a>
-                        <h3 class="tittle-event">Título o nombre</h3>
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-map-marker-alt icon-info"></span>Lugar en
-                                    donde se realizará</p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="far fa-calendar-alt icon-info"></span>Fecha y hora
-                                </p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-tag icon-info"></span>Categoría</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container-event">
-                        <a class="link-event" href="./event.php">
-                            <img class="img-event" src="./img/mountainbike.png" alt="mountainbike">
-                        </a>
-                        <h3 class="tittle-event">Título o nombre</h3>
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-map-marker-alt icon-info"></span>Lugar en
-                                    donde se realizará</p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="far fa-calendar-alt icon-info"></span>Fecha y hora
-                                </p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-tag icon-info"></span>Categoría</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container-event">
-                        <a class="link-event" href="./event.php">
-                            <img class="img-event" src="./img/mountainbike.png" alt="mountainbike">
-                        </a>
-                        <h3 class="tittle-event">Título o nombre</h3>
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-map-marker-alt icon-info"></span>Lugar en
-                                    donde se realizará</p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="far fa-calendar-alt icon-info"></span>Fecha y hora
-                                </p>
-                            </div>
-                            <div class="col-12">
-                                <p class="info-event"><span class="fas fa-tag icon-info"></span>Categoría</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+
         </section>
         <!--events-section-->
 
@@ -248,7 +139,12 @@
         </footer>
         <!--footer -->
     </div>
+
     <script src="./js/main.js"></script>
+    <script>
+        const mountedApp = app.mount("#app");
+    </script>
+
 </body>
 
 </html>

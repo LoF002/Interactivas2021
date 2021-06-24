@@ -72,6 +72,10 @@ html {
   font-weight: 700;
 }
 
+.top-nav-link:hover {
+  color: #573280;
+}
+
 .background-search {
   padding: 0.3em;
   margin: 0;

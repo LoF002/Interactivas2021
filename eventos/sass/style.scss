@@ -79,6 +79,9 @@ html {
     font-size: 25px;
     font-weight: $bold;
 }
+.top-nav-link:hover{
+    color: $ligth-purple;       
+}
 
 .background-search {
     padding: .3em;
@@ -214,7 +217,7 @@ html {
 }
 
 .tittle-event {
-    margin: 0.25em 0em;
+    margin: 0;
     padding: 0;
     font-size: 30px;
     font-weight: $bold;
@@ -222,7 +225,7 @@ html {
 }
 
 .info-event {
-    margin: 0.25em 0em;
+    margin: 0;
     padding: 0;
     font-size: 20px;
     font-weight: $regular;
@@ -517,8 +520,6 @@ html {
     }
 
     .tittle-event {
-        margin: 0.3125em 0.9375em;
-        padding: 0;
         font-size: 24px;
         font-weight: $bold;
         color: $purple;
@@ -530,8 +531,6 @@ html {
     }
 
     .info-event {
-        margin: 0.3125em 0.9375em;
-        padding: 0;
         font-size: 18px;
         font-weight: $regular;
         color: $ligth-purple;

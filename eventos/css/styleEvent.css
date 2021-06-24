@@ -68,6 +68,10 @@ footer {
   font-weight: 700;
 }
 
+.top-nav-link:hover {
+  color: #573280;
+}
+
 .background-search {
   padding: 0.3em;
   margin: 0;
@@ -144,6 +148,10 @@ footer {
   border: none;
   background-color: #E3E4E5;
   color: #23022E;
+}
+
+.registration-btn:hover {
+  background-color: #23022E;
 }
 
 .description-section {
@@ -320,6 +328,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.input-C {
+  width: 60px;
 }
 
 .line-modal {

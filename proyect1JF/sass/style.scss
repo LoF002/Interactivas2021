@@ -1,0 +1,197 @@
+@import 'vars';
+@import 'media-queries';
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    font-family: 'Varela Round', sans-serif;
+    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.s-top{
+  
+    background-color: $black;
+    
+    }
+.c_top{
+    background-color: $black;
+}
+.logo_container{
+    @include respond-to($phone){
+        width: 250px;
+        padding-left: 50px;
+    }
+}
+
+.header_containers{
+    width: 50%;
+   
+    height: auto; 
+}
+    
+.lupa_btn{
+    background-color:$white-copy; 
+    
+    &:hover{
+        background-color: $primary;
+        color: $white-copy;
+    }
+}
+.lupa{
+    padding: 0.5px;
+}
+
+
+
+
+
+.s-outstanding{
+    
+    margin-left: 20vw;
+    background-color: $white-copy;
+    @include respond-to($phone){
+        margin-left: 0px;
+        margin-top: 85px;
+    }
+    
+}
+#destacado{
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.ostd-card{
+
+    position: static;
+    border: 1px solid $aux;
+}
+.d_basic{
+    h4{
+    font-weight: 800;
+    }
+}
+.data_basic{
+    h4{
+        font-size: 18px;
+    font-weight: 700;
+    }
+}
+
+.flecha_I{
+    width: 5em;
+    
+}
+.flecha_D{
+    width: 5em;
+
+}
+
+.filter_container{
+    background-color: $black;
+    border-radius: 5px;
+    color:$white-copy;
+    width: 15vw;
+    
+    @include respond-to($phone){
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+}
+
+.s-main{
+    border-top: $black solid 1px;
+    @include respond-to($phone){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.container_casilla{
+    
+    input:checked{
+        
+        background-color: $aux;
+        
+    }
+    input:hover{
+        background-color: $primary;
+    }
+       
+}
+
+.b_details{
+    background-color: $aux3;
+    color: $white-copy;
+    border: solid black 1px;
+    border-radius: 5%;
+    &:hover{
+        background-color: $white-copy;
+        border: solid $aux3 1px;
+        color: $aux3;
+        
+    }
+    
+    
+}
+  
+.f_container{
+    border-radius: 5px;
+    border: solid 1px $white-copy;
+}
+.card_container{
+    padding-left: 10px;
+    @include respond-to($phone){
+        padding-left: 0px;
+    }
+}
+
+.footer_container{
+    background-color: $black;
+    color: $white-copy;
+    @include respond-to($phone){
+       position: relative ;
+       bottom: 0;
+      
+    }    
+
+}
+.c_msg{
+    @include respond-to($phone){
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }    
+
+}
+.contac_container{
+    @include respond-to($phone){
+        width: 80vw;
+        margin-left: 40px;
+    }
+   
+}
+
+//accordion
+.input_C{
+    width: 50px;
+    @include respond-to($phone){
+        width: 25px;
+        margin: 0;
+        padding: 0;
+    }    
+    
+}
+//carousel
+.carousel_container{
+    background-color: $aux4;
+}
+
+
+

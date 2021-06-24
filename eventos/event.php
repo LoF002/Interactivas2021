@@ -6,18 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Name</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous">
-    </script>
+
+    <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!--fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!--css-->
     <link rel="stylesheet" href="./css/styleEvent.css" rel="stylesheet">
+
+    <!--vue-->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div id="app" class="container-fluid">
 
         <!--background-->
         <div class="background-top">
@@ -41,9 +50,7 @@
                             <nav class="navbar">
                                 <div class="dropdown">
 
-                                    <a class="top-nav-link tittle-categorias dropdown-toggle" href="#" role="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                        aria-expanded="false">Categorías</a>
+                                    <a class="top-nav-link tittle-categorias dropdown-toggle" href="#" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
 
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li><a class="dropdown-item top-nav-link" href="#">Ciclismo</a></li>
@@ -87,12 +94,11 @@
             <!--event-section-->
             <section class="event-section">
                 <h3 class="tittle-event">Título o nombre</h3>
-                <img class="img-event" src="./img/mountainbike.png" alt="mountainbike">
+                <img class="img-event" src="./img/event01.png" alt="mountainbike">
                 <div class="container-price">
                     <p class="price">₡3.000</p>
                 </div>
-                <button type="button" class="btn registration-btn" data-bs-toggle="modal"
-                    data-bs-target="#modalRegistration">registrarse</button>
+                <button type="button" class="btn registration-btn" data-bs-toggle="modal" data-bs-target="#modalRegistration">registrarse</button>
             </section>
             <!--event-section-->
 
@@ -100,8 +106,7 @@
         <!--background-->
 
         <!--restratration-section-->
-        <div class="modal fade" id="modalRegistration" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="modalRegistration" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content container-popup">
                     <div class="modal-header">
@@ -111,54 +116,42 @@
                     <div class="modal-body">
                         <h5 class="tittle-modal">Título o nombre del evento</h5>
                         <p class="sub-tittle-modal">revisar y realizar registro</p>
-                        <div class="row row-modal">
-                            <div class="col-6">Menor de edad</div>
-                            <div class="col-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault"></label>
-                                </div>
-                            </div>
-                            <div class="col-4"><input class="input-cantidad" type="text" placeholder="cantidad"></div>
-                        </div>
-                        <div class="row row-modal">
-                            <div class="col-6">Mayor de edad</div>
-                            <div class="col-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault"></label>
-                                </div>
-                            </div>
-                            <div class="col-4"><input class="input-cantidad" type="text" placeholder="cantidad"></div>
-                        </div>
-                        <div class="line-modal"></div>
+
                         <div class="row">
-                            <div class="col-9">Precio por menor de edad</div>
-                            <div class="col-3">₡1.500</div>
+                            <div class="col-auto">
+                                <p>Menor de edad</p>
+                                <p>Mayor de edad</p>
+                            </div>
+                            <div class="col-auto">
+                                <p>Valor: ₡{{priceK}} </p>
+                                <p>Valor: ₡{{priceA}} </p>
+                            </div>
+                            <div class="col-1">
+                                <label for="quantityK" class="visually-hidden">Qty</label>
+                                <input type="number" v-model="qtyK" class="input-C pt-sm-0 pb-sm-0" id="quantityK" placeholder="0" required>
+                                <label for="quantityA" class="visually-hidden">Qty</label>
+                                <input type="number" v-model="qtyA" class="input-C pt-sm-0 pb-sm-0 mt-1" id="quantityA" placeholder="0" required>
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-9">Precio por mayor de edad</div>
-                            <div class="col-3">-</div>
-                        </div>
+
                         <div class="line-modal"></div>
                         <div class="row">
                             <div class="col-9">Total por menores de edad</div>
-                            <div class="col-3">₡15.000</div>
+                            <div class="col-3">₡{{ qtyK*priceK }}</div>
                         </div>
                         <div class="row">
                             <div class="col-9">Total por mayores de edad</div>
-                            <div class="col-3">-</div>
+                            <div class="col-3">₡{{ qtyA*priceA }}</div>
                         </div>
                         <div class="line-modal"></div>
                         <div class="row">
                             <div class="col-9">Total</div>
-                            <div class="col-3">₡15.000</div>
+                            <div class="col-3">₡{{ (qtyK*priceK) + (qtyA*priceA) }}</div>
                         </div>
                         <div class="line-modal"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal"
-                            data-bs-dismiss="modal">Siguiente</button>
+                        <button v-on:click="chargeTotal((qtyK*priceK) + (qtyA*priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
                     </div>
                 </div>
             </div>
@@ -180,14 +173,12 @@
 
                         <div class="metodos-pago-mobile">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                 <img class="logo-visa-mobile" src="./img/visaMobile.svg" alt="logo visa">
                                 <label class="form-check-label" for="flexRadioDefault1">VISA</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" checked>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                                 <img class="logo-paypal-mobile" src="./img/paypalMobile.svg" alt="logo paypal">
                                 <label class="form-check-label" for="flexRadioDefault2">Paypal</label>
                             </div>
@@ -196,20 +187,22 @@
                         <div class="line-modal"></div>
                         <div class="row">
                             <div class="col-9">Total</div>
-                            <div class="col-3">₡15.000</div>
+                            <div class="col-3">₡{{total}}</div>
                         </div>
                         <div class="line-modal"></div>
 
                         <div class="form-modal">
                             <p class="tittle-form">Registro a nombre de</p>
-                            <input class="input-form" type="text" placeholder="Nombre completo">
-                            <input class="input-form" type="text" placeholder="Correo electrónico">
+                            <input v-model="name" class="input-form" type="text" placeholder="Nombre completo">
+                            <input v-model="email" class="input-form" type="text" placeholder="Correo electrónico">
                         </div>
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn modal-btn" data-bs-target="#modal3" data-bs-toggle="modal"
-                            data-bs-dismiss="modal">Finalizar registro</button>
+                        <div class="row">
+                            <div class="col"><button type="button" class="btn modal-btn" data-bs-target="#modalRegistration" data-bs-toggle="modal" data-bs-dismiss="modal">Regresar</button></div>
+                            <div class="col"><button type="button" class="btn modal-btn" data-bs-target="#modal3" data-bs-toggle="modal" data-bs-dismiss="modal">Finalizar registro</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -222,8 +215,7 @@
                 <div class="modal-content container-popup">
                     <div class="modal-header header-resume">
                         <div class="row">
-                            <div class="col-12"><img class="check" src="./img/check-resume-mobile.svg"
-                                    alt="check-resume-mobile"></div>
+                            <div class="col-12"><img class="check" src="./img/check-resume-mobile.svg" alt="check-resume-mobile"></div>
                             <div class="col-12">
                                 <p class="tittle-resume">¡Registro finalizado!</p>
                             </div>
@@ -238,10 +230,10 @@
                                 <div class="col-9">Título o nombre del evento</div>
                             </div>
                             <div class="row">
-                                <div class="col-9">Nombre completo</div>
+                                <div class="col-9">{{name}}</div>
                             </div>
                             <div class="row">
-                                <div class="col-9">Correo electrónico</div>
+                                <div class="col-9">{{email}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-9">Método de pago</div>
@@ -249,7 +241,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-9">Total</div>
-                                <div class="col-3">₡15.000</div>
+                                <div class="col-3">₡{{total}}</div>
                             </div>
                             <div class="line-modal"></div>
 
@@ -301,25 +293,23 @@
                 <div id="carousel-related-event" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="img-event-related" src="./img/ruta-de-los-conquistadores.png" alt="ruta-de-los-conquistadores">
+                            <img class="img-event-related" src="./img/event02.png" alt="ruta-de-los-conquistadores">
                             <h3 class="tittle-event-related">Título o nombre</h3>
                         </div>
                         <div class="carousel-item">
-                            <img class="img-event-related" src="./img/ruta-de-los-conquistadores.png" alt="ruta-de-los-conquistadores">
+                            <img class="img-event-related" src="./img/event02.png" alt="ruta-de-los-conquistadores">
                             <h3 class="tittle-event-related">Título o nombre</h3>
                         </div>
                         <div class="carousel-item">
-                            <img class="img-event-related" src="./img/ruta-de-los-conquistadores.png" alt="ruta-de-los-conquistadores">
+                            <img class="img-event-related" src="./img/event02.png" alt="ruta-de-los-conquistadores">
                             <h3 class="tittle-event-related">Título o nombre</h3>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" data-bs-target="#carousel-related-event" type="button"
-                        data-bs-slide="prev">
+                    <button class="carousel-control-prev" data-bs-target="#carousel-related-event" type="button" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </button>
-                    <button class="carousel-control-next" data-bs-target="#carousel-related-event" type="button"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" data-bs-target="#carousel-related-event" type="button" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </button>
@@ -345,7 +335,12 @@
         <!--footer-->
 
     </div>
+
     <script src="./js/main.js"></script>
+    <script>
+        const mountedApp = app.mount("#app");
+    </script>
+
 </body>
 
 </html>
